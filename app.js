@@ -9,5 +9,14 @@ const agregarAmigo = () => {
     return;
   } else {
     amigos.push(texto.value);
+    recorrerArrayDeAmigos();
   }
+};
+
+const recorrerArrayDeAmigos = () => {
+  const lista = document.getElementById("listaAmigos");
+  lista.innerHTML = "";
+  amigos.forEach((nombre) => {
+    lista.innerHTML += `<li>${nombre}</li>`;
+  });
 };
